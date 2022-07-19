@@ -16,10 +16,10 @@ class Timer {
 
     start = () => {
         if(this.onStart) {
-            this.onStart();
+            this.onStart(this.timeRemaining);
         }
         this.tick();
-        this.intervalFunction = setInterval(this.tick, 1000);
+        this.intervalFunction = setInterval(this.tick, 50);
     }
 
     pause = () => {
@@ -28,9 +28,9 @@ class Timer {
 
     tick = () => {
         if(this.timeRemaining > 0) {
-            this.timeRemaining = this.timeRemaining - 1;
+            this.timeRemaining = this.timeRemaining - .05;
             if(this.onTick) {
-                this.onTick();
+                this.onTick(this.timeRemaining);
             }
          } else {
             this.pause();
@@ -45,6 +45,6 @@ class Timer {
     }
 
     set timeRemaining(time) {
-        this.durationInput.value = time;
+        this.durationInput.value = time.toFixed(2);
     }
 }
