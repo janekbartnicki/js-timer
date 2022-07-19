@@ -22,13 +22,19 @@
 .container .controls .controls-buttons button {
   background-color: white;
   border: transparent;
-  border-radius: 2px;
   font-size: 40px;
-  padding: 7px 10px;
-  margin: 2px;
 }
 .container .controls .controls-buttons .button-activated-background {
   filter: invert(100%);
+  transition: all 0.5s linear;
+}
+.container .controls .controls-buttons #start-button {
+  border-radius: 25px 0 0 25px;
+  padding: 7px 10px 7px 15px;
+}
+.container .controls .controls-buttons #pause-button {
+  border-radius: 0 25px 25px 0;
+  padding: 7px 15px 7px 10px;
 }
 .container .controls input {
   width: 20%;
@@ -42,4 +48,15 @@
 }
 .container .controls input:focus {
   outline: none;
+}
+
+footer {
+  font-family: Arial;
+  text-align: center;
+}
+footer a {
+  font-size: 12px;
+  opacity: 80%;
+  text-decoration: none;
+  color: black;
 }/*# sourceMappingURL=style.css.map */
