@@ -17,14 +17,21 @@ class Timer {
         this.intervalFunction = setInterval(this.tick, 1000);
     }
 
-    tick = () => {
-        console.log('tick');
+    pause = () => {
+        clearInterval(this.intervalFunction);
     }
 
-    pause = () => {
-        console.log('pause')
-        clearInterval(this.intervalFunction);
+    tick = () => {
+        this.timeRemaining > 0 ? this.timeRemaining = this.timeRemaining - 1 : this.pause();
+    }
+
+    get timeRemaining() {
+        return parseFloat(this.durationInput.value);
+    }
+
+    set timeRemaining(time) {
+        this.durationInput.value = time;
     }
 }
 
-const timer = new Timer(durationInput, startButton, pauseButton);
+const timer = new Timer(durationInput, startButton, pauseButton, {onStart});
