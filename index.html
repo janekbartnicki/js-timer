@@ -5,23 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <style>circle {transition: all 1s linear;}</style> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <svg height="400" width="400">
-        <circle 
-        r="190" 
-        cx="200" 
-        cy="200"
-        fill="transparent"
-        stroke="black"
-        stroke-width="15"
-        transform="rotate(-90 200 200)"
-        />
-    </svg>
-    <input id="duration-input" value="30">
-    <button id="start-button">Start</button>
-    <button id="pause-button">Pause</button>
+    <div class="container">
+        <svg height="400" width="400">
+            <circle 
+            r="190" 
+            cx="200" 
+            cy="200"
+            fill="transparent"
+            stroke="black"
+            stroke-width="15"
+            transform="rotate(-90 200 200)"
+            />
+        </svg>
+        <div class="controls">
+            <input id="duration-input" value="30">
+            <button id="start-button"><i class="fa-solid fa-play"></i></button>
+            <button id="pause-button"><i class="fa-solid fa-pause"></i></button>
+        </div>
+    </div>
+
     <script src="timer.js"></script>
     <script src="index.js"></script>
 </body>
