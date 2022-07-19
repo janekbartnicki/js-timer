@@ -4,12 +4,42 @@
   align-items: center;
   width: 100%;
 }
-
-svg {
+.container svg {
   margin: 5%;
 }
-
-.controls {
+.container .controls {
   position: absolute;
-  top: 25%;
+  top: 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .controls .controls-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+.container .controls .controls-buttons button {
+  background-color: white;
+  border: transparent;
+  border-radius: 2px;
+  font-size: 40px;
+  padding: 7px 10px;
+  margin: 2px;
+}
+.container .controls .controls-buttons .button-activated-background {
+  filter: invert(100%);
+}
+.container .controls input {
+  width: 20%;
+  background-color: transparent;
+  text-align: center;
+  border: none;
+  border-bottom: solid 3px black;
+  font-size: 5em;
+  transition: all 0.1s linear;
+  display: block;
+}
+.container .controls input:focus {
+  outline: none;
 }/*# sourceMappingURL=style.css.map */

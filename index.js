@@ -20,3 +20,10 @@ function onTick(timeRemaining) {
 function onComplete() {
     console.log('Timer is completed!');
 }
+
+// for(let button of document.querySelectorAll('button')) {
+//     button.addEventListener('click', function() {
+//         console.log(this)
+//         this.classList.toggle('button-activated-background');
+//     });
+// }

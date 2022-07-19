@@ -20,10 +20,14 @@ class Timer {
         }
         this.tick();
         this.intervalFunction = setInterval(this.tick, 50);
+        this.startButton.classList.toggle('button-activated-background');
+        this.pauseButton.classList.toggle('button-activated-background', false);
     }
 
     pause = () => {
         clearInterval(this.intervalFunction);
+        this.startButton.classList.toggle('button-activated-background');
+        this.pauseButton.classList.toggle('button-activated-background');
     }
 
     tick = () => {
